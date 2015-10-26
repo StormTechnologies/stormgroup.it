@@ -1859,7 +1859,7 @@ p {
 
 .poly-bottom {
   top: auto;
-  bottom: 0px; }
+  bottom: -1px; }
 
 .polygon-grey {
   fill: #f5f5f5; }
