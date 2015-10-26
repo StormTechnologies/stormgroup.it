@@ -1,0 +1,60 @@
+//  GMR UI
+//  Skeleton
+//
+
+.ssc-fluid {
+  width: 100%;
+  @include container(100%);
+}
+
+[class*=ssc] {
+  padding: 0 15px;
+}
+
+.ssc {
+  @include bp(xs) {
+    @include container(100%);
+  }
+  @include bp(sm) {
+    @include container(750px);
+  }
+  @include bp(md) {
+    @include container(970px);
+  }
+  @include bp(lg) {
+    @include container(1170px);
+  }
+}
+
+.ssc-sm {
+  @include bp(xs) {
+    @include container(100%);
+  }
+  @include bp(sm) {
+    @include container(750px);
+  }
+}
+
+.ssc-row {
+  float: left;
+  width: 100%;
+  @include clearfix;
+}
+
+// ESC Flex (Layout wrap)
+//
+
+.ssc-flex {
+  @include bp(xs) {
+    @include container(100%);
+  }
+  @include bp(sm) {
+    @include container(750px);
+  }
+  @include bp(md) {
+    @include container(970px);
+  }
+  @include bp(lg) {
+    @include container(1170px);
+  }
+}
