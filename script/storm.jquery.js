@@ -577,7 +577,7 @@ FSS.Plane.prototype = Object.create(FSS.Geometry.prototype);
  * @author Matthew Wagerfield
  */
 FSS.Material = function(ambient, diffuse) {
-  this.ambient = new FSS.Color(ambient || '#444444');
+  this.ambient = new FSS.Color(ambient || '#FFFFFF');
   this.diffuse = new FSS.Color(diffuse || '#FFFFFF');
   this.slave = new FSS.Color();
 };
@@ -1253,17 +1253,17 @@ FSS.SVGRenderer.prototype.formatStyle = function(color) {
   // Mesh Properties
   //------------------------------
   var MESH = {
-    width: 1.8,
-    height: 1.8,
-    depth: 7,
-    segments: 12,
-    slices: 8,
-    xRange: 0.8,
-    yRange: 0.1,
-    zRange: 1.0,
-    ambient: '#555555',
+    width: 1.2,
+    height: 1.2,
+    depth: 0,
+    segments: 7,
+    slices: 7,
+    xRange: 0.2,
+    yRange: 0.2,
+    zRange: 0.2,
+    ambient: '#202020',
     diffuse: '#FFFFFF',
-    speed: 0.0001
+    speed: 0.0021
   };
 
   //------------------------------
@@ -1272,18 +1272,18 @@ FSS.SVGRenderer.prototype.formatStyle = function(color) {
   var LIGHT = {
     count: 2,
     xyScalar: 1,
-    zOffset: 100,
-    ambient: '#1e222b',
-    diffuse: '#1e222b',
+    zOffset: 199,
+    ambient: '#848484',
+    diffuse: '#282828',
     speed: 0.0001,
-    gravity: 500,
+    gravity: 800,
     dampening: 0.95,
     minLimit: 10,
-    maxLimit: null,
-    minDistance: 20,
-    maxDistance: 400,
+    maxLimit: 10,
+    minDistance: 10,
+    maxDistance: 200,
     autopilot: true,
-    draw: false,
+    draw: true,
     bounds: FSS.Vector3.create(),
     step: FSS.Vector3.create(
       Math.randomInRange(0.2, 1.0),
@@ -1369,7 +1369,7 @@ FSS.SVGRenderer.prototype.formatStyle = function(color) {
 
   function createLights() {
     var l, light;
-    for (l = scene.lights.length - 1; l >= 0; l--) {
+    for (l = scene.lights.length - 1; l >= 1; l--) {
       light = scene.lights[l];
       scene.remove(light);
     }

@@ -10,7 +10,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
 
-$dark: #1f212c;
+$dark: #4f5759;
 
 // Canvas Trickery
 //
@@ -147,7 +147,7 @@ p {
   float: left;
   width: 100%;
   padding: 50px 0;
-  background: $dark url(../img/bg.jpg) center top no-repeat;
+  background: $dark url(../img/) center top no-repeat;
   color: lighten($dark,25%);
   p {
     color: lighten($dark,25%);
